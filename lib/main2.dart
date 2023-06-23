@@ -19,21 +19,41 @@ class MyHomePage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("New App"),
-      ),
-      body: Container(
-        color: Colors.greenAccent[400],
-        height: 125,
-        width: 150,
-        child: Center(
-            child: Text(
-          " Body",
-          style: TextStyle(
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              fontSize: 25),
-        )),
+        title: Text("CATIFY", ),),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(
+                " Catify",
+                style: TextStyle(
+                    color: Colors.greenAccent,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 25),
+              ),
+            ),
+            // Icon(
+            //   Icons.person,
+            //   size: 50,
+            //   color: Colors.blue,
+            // ),
+            Column(
+              children: [
+                Image(
+                  image: AssetImage("assets/images/cat heart.png"),
+                ),
+                Image( height: 310,
+                    image: NetworkImage(
+                  "https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=600",
+                )),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
