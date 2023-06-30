@@ -9,7 +9,14 @@ void main() {
   ));
 }
 
-class loginpage extends StatelessWidget {
+class loginpage extends StatefulWidget {
+  @override
+  State<loginpage> createState() => _loginpageState();
+}
+
+class _loginpageState extends State<loginpage> {
+  bool passview = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +31,7 @@ class loginpage extends StatelessWidget {
         children: [
           const Center(
             child: Padding(
-              padding: EdgeInsets.only(top: 15),
+              padding: EdgeInsets.only(top: 15, bottom: 15),
               child: Text(
                 "Login",
                 style: TextStyle(
@@ -36,26 +43,40 @@ class loginpage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40.0, left: 100, right: 100),
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.person),
+                  prefixIcon: Icon(Icons.person),
                   labelText: "username",
                   hintText: "Username",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(50))),
+                      borderRadius: BorderRadius.circular(10))),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 40, left: 100, right: 100),
+            padding: const EdgeInsets.only(top: 40, left: 100, right: 100, bottom: 15),
             child: TextField(
-              obscureText: true,
+              obscureText: !passview,
+              // password will be hidden only if obscure text is true, here passview is set as false at the beggining that means we need not passview to make the password hidden
               // obscuringCharacter: '#',
 
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.key),
-                suffixIcon: Icon(Icons.visibility_off),
+                  prefixIcon: Icon(Icons.key),
+                  // suffixIcon: Icon(Icons.visibility_off),
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        if (passview == false) {
+                          passview = true;
+                        } else
+                          passview = false;
+                      });
+                    },
+                    icon: Icon(passview == true
+                        ? Icons.visibility
+                        : Icons.visibility_off),
+                  ),
                   labelText: "password",
                   hintText: "Password ",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(50))),
+                      borderRadius: BorderRadius.circular(10))),
             ),
           ),
           Padding(
