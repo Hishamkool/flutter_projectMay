@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(myApp1());
+  runApp(homepage());
 }
 
-class myApp1 extends StatelessWidget {
+class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,17 +33,17 @@ class MyHomePage1 extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Text(" Catify",
                   style: GoogleFonts.sacramento(
-                      textStyle: const TextStyle(
-                          fontSize: 50, fontWeight: FontWeight.bold),
-                      // foreground: Paint()
-                      //   ..shader = ui.Gradient.linear(
-                      //     const Offset(0, 20),
-                      //     const Offset(150, 20),
-                      //     <Color>[
-                      //       Colors.red,
-                      //       Colors.green,
-                      //     ],
-                      //   )
+                    textStyle: const TextStyle(
+                        fontSize: 50, fontWeight: FontWeight.bold),
+                    // foreground: Paint()
+                    //   ..shader = ui.Gradient.linear(
+                    //     const Offset(0, 20),
+                    //     const Offset(150, 20),
+                    //     <Color>[
+                    //       Colors.red,
+                    //       Colors.green,
+                    //     ],
+                    //   )
                   )
                   // style: TextStyle(
                   //     color: Colors.greenAccent,
