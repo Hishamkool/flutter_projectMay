@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(MaterialApp(
     home: loginpage(),
-    debugShowCheckedModeBanner:false,
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -14,8 +14,10 @@ class loginpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SignIn",
-            style: GoogleFonts.sacramento(textStyle: TextStyle(fontSize: 30)),),
+        title: Text(
+          "SignIn",
+          style: GoogleFonts.sacramento(textStyle: TextStyle(fontSize: 30)),
+        ),
         backgroundColor: Colors.deepOrange,
       ),
       body: Column(
@@ -25,7 +27,8 @@ class loginpage extends StatelessWidget {
               padding: EdgeInsets.only(top: 15),
               child: Text(
                 "Login",
-                style: TextStyle(color: Colors.orange, fontSize: 50, fontFamily: 'Satisfy' ),
+                style: TextStyle(
+                    color: Colors.orange, fontSize: 50, fontFamily: 'Satisfy'),
               ),
             ),
           ),
@@ -33,6 +36,7 @@ class loginpage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40.0, left: 100, right: 100),
             child: TextField(
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.person),
                   labelText: "username",
                   hintText: "Username",
                   border: OutlineInputBorder(
@@ -42,7 +46,12 @@ class loginpage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 40, left: 100, right: 100),
             child: TextField(
+              obscureText: true,
+              // obscuringCharacter: '#',
+
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.key),
+                suffixIcon: Icon(Icons.visibility_off),
                   labelText: "password",
                   hintText: "Password ",
                   border: OutlineInputBorder(
