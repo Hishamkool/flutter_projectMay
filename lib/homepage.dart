@@ -22,7 +22,7 @@ class MyHomePage1 extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "CATIFY",
-          style: TextStyle(fontFamily: 'Satisfy-Regular.ttf'),
+          style: TextStyle(fontFamily: "DancingScript"),
         ),
       ),
       body: Center(

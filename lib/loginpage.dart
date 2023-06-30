@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp(
     home: loginpage(),
+    debugShowCheckedModeBanner:false,
   ));
 }
 
@@ -11,14 +13,19 @@ class loginpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("SignIn",
+            style: GoogleFonts.sacramento(textStyle: TextStyle(fontSize: 30)),),
+        backgroundColor: Colors.deepOrange,
+      ),
       body: Column(
         children: [
-          Center(
+          const Center(
             child: Padding(
-              padding: const EdgeInsets.only(top: 15),
+              padding: EdgeInsets.only(top: 15),
               child: Text(
-                "Login Page",
-                style: TextStyle(color: Colors.orange, fontSize: 50),
+                "Login",
+                style: TextStyle(color: Colors.orange, fontSize: 50, fontFamily: 'Satisfy' ),
               ),
             ),
           ),
@@ -39,9 +46,7 @@ class loginpage extends StatelessWidget {
                   labelText: "password",
                   hintText: "Password ",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(50)
-                  )
-              ),
+                      borderRadius: BorderRadius.circular(50))),
             ),
           ),
           Padding(
@@ -51,8 +56,7 @@ class loginpage extends StatelessWidget {
                 child: const Text(
                   "Login",
                   style: TextStyle(fontSize: 20),
-                )
-            ),
+                )),
           ),
           TextButton(onPressed: () {}, child: Text("not a user? signup"))
         ],
