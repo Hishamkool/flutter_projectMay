@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_may_1/homepage.dart';
+
+import 'package:flutter_may_1/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'listview.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -26,7 +29,7 @@ class _loginpageState extends State<loginpage> {
         title: Text(
           "SignIn",
           style:
-          GoogleFonts.sacramento(textStyle: const TextStyle(fontSize: 30)),
+              GoogleFonts.sacramento(textStyle: const TextStyle(fontSize: 30)),
         ),
         backgroundColor: Colors.deepOrange,
       ),
@@ -113,7 +116,7 @@ class _loginpageState extends State<loginpage> {
                     final checkfield = formkey.currentState!.validate();
                     if (checkfield) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => homepage()));
+                          MaterialPageRoute(builder: (context) => listpage()));
                     } else {
                       return null;
                     }
@@ -123,7 +126,12 @@ class _loginpageState extends State<loginpage> {
                     style: TextStyle(fontSize: 20),
                   )),
             ),
-            TextButton(onPressed: () {}, child: Text("not a user? signup"))
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => signup()));
+                },
+                child: Text("not a user? signup"))
           ],
         ),
       ),
