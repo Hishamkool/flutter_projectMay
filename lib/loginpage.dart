@@ -111,20 +111,25 @@ class _loginpageState extends State<loginpage> {
             ),
             Padding(
               padding: const EdgeInsets.all(50.0),
-              child: ElevatedButton(
-                  onPressed: () {
-                    final checkfield = formkey.currentState!.validate();
-                    if (checkfield) {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => listpage()));
-                    } else {
-                      return null;
-                    }
-                  },
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(fontSize: 20),
-                  )),
+              child: SizedBox(
+                height: 40,
+                width: 100,
+                child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor:MaterialStatePropertyAll<Color>(Colors.greenAccent)),
+                    onPressed: () {
+                      final checkfield = formkey.currentState!.validate();
+                      if (checkfield) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => listpage()));
+                      } else {
+                        return null;
+                      }
+                    },
+                    child: const Text(
+                      "Login",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    )),
+              ),
             ),
             TextButton(
                 onPressed: () {

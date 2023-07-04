@@ -5,6 +5,7 @@ import 'package:flutter_may_1/loginpage.dart';
 void main() {
   runApp(MaterialApp(
     home: signup(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -18,6 +19,7 @@ class _signupState extends State<signup> {
   final TextEditingController pass = TextEditingController();
   final TextEditingController confPass = TextEditingController();
   bool passhidden = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +60,29 @@ class _signupState extends State<signup> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                obscureText: !passhidden,
                 decoration: InputDecoration(
                     labelText: "Password",
                     hintText: "........",
                     prefixIcon: Icon(Icons.key),
+                    suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          if (passhidden == false) {
+                            passhidden = true;
+                          } else {
+                            passhidden = false;
+                          }
+                        });
+                      },
+                      icon: Icon(passhidden == false
+                          ? Icons.visibility_off
+                          : Icons.visibility),
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),
-                textInputAction: TextInputAction.next,
+                // textInputAction: TextInputAction.next,
                 controller: pass,
                 validator: (passw) {
                   if (passw!.isEmpty || passw.length < 8) {
@@ -79,6 +96,8 @@ class _signupState extends State<signup> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                // obscureText: !passhiddenconfirm,
+                obscureText: !passhidden,
                 decoration: InputDecoration(
                     labelText: "Confirm password",
                     hintText: "........",
@@ -86,8 +105,8 @@ class _signupState extends State<signup> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),
-                textInputAction: TextInputAction.next,
-                controller: confPass,
+                textInputAction: TextInputAction.none,
+                // controller: confPass,
                 validator: (passcheck) {
                   if (passcheck == null) {
                     return 'Null';

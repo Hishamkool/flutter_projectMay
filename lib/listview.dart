@@ -2,7 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: listpage()));
+  runApp(MaterialApp(
+      home: listpage(),
+    debugShowCheckedModeBanner: false,
+  )
+
+  );
 }
 
 class listpage extends StatelessWidget {
@@ -36,7 +41,10 @@ class listpage extends StatelessWidget {
             color: Colors.redAccent,
             child: ListTile(
               leading: Icon(Icons.person_2),
-              title: Text("Shubam",style: TextStyle(color: Colors.white),),
+              title: Text(
+                "Shubam",
+                style: TextStyle(color: Colors.white),
+              ),
               subtitle: Text("work"),
               trailing: Icon(Icons.call),
             ),
