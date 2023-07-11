@@ -90,7 +90,7 @@ class gridAssignment extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: Icon(iconss[index],size: 100),
+                        child: Icon(iconss[index],size: 60),
                       ),
                       Text(data[index]),
                     ],
