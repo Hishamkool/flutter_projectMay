@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   animated_splash_screen: ^1.3.0
   staggered_grid_view_flutter: ^0.0.4
+  flutter_slider_drawer: ^2.1.3
+  slide_drawer: ^1.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -67,6 +69,7 @@ flutter:
      - assets/images/food/
      - assets/images/gridImages/
      - assets/icon/youtube_icons/
+     - assets/profile/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
