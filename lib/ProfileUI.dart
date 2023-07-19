@@ -119,36 +119,38 @@ class profileUI extends StatelessWidget {
                 style: TextStyle(fontSize: 20),
               )),
             ),
-            Container(
-              // margin: EdgeInsets.only(left: 25, right: 25),
-              child: Column(
-                children: [
-                  scrollContainer(
-                    leadingIcon: Icons.privacy_tip,
-                    listTitle: 'Privacy',
-                  ),
-                  SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.privacy_tip,
-                    listTitle: 'Privacy',
-                  ),
-                  SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.privacy_tip,
-                    listTitle: 'Privacy',
-                  ),
-                  SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.privacy_tip,
-                    listTitle: 'Privacy',
-                  ),
-                  SizedBox(height: 10,),
-                  scrollContainer(
-                    leadingIcon: Icons.privacy_tip,
-                    listTitle: 'Privacy',
-                  ),
-                  SizedBox(height: 10,),
-                ],
+            SingleChildScrollView(
+              child: Container(
+                // margin: EdgeInsets.only(left: 25, right: 25),
+                child: Column(
+                  children: [
+                    scrollContainer(
+                      leadingIcon: Icons.privacy_tip,
+                      listTitle: 'Privacy',
+                    ),
+                    SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.privacy_tip,
+                      listTitle: 'Privacy',
+                    ),
+                    SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.privacy_tip,
+                      listTitle: 'Privacy',
+                    ),
+                    SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.privacy_tip,
+                      listTitle: 'Privacy',
+                    ),
+                    SizedBox(height: 10,),
+                    scrollContainer(
+                      leadingIcon: Icons.privacy_tip,
+                      listTitle: 'Privacy',
+                    ),
+                    SizedBox(height: 10,),
+                  ],
+                ),
               ),
             ),
           ],
@@ -168,7 +170,7 @@ class scrollContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 50, right: 50),
-      decoration: BoxDecoration(color: Colors.grey[300],borderRadius: BorderRadius.circular(100)),
+      decoration: BoxDecoration(color: Colors.grey[200],borderRadius: BorderRadius.circular(100)),
       child: ListTile(
         leading: Icon(leadingIcon) ,
         title: Text(listTitle),
