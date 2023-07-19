@@ -17,6 +17,7 @@ class profileUI extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       body: Container(
+        color: Colors.grey[50],
         // child: SliverAppBar(
         //   expandedHeight: 100, //change later
         //   leading: IconButton(
@@ -59,15 +60,16 @@ class profileUI extends StatelessWidget {
                 height: 200,
                 width: 200,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+
                   image: DecorationImage(
-                      image: AssetImage('assets/images/cat heart.png')),
+                      image: AssetImage('assets/profile/hisham.jpg'),fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(100),
                 ),
               ),
             ),
+            SizedBox(height: 20,),
             Container(
-              margin: EdgeInsets.only(left: 100, right: 100, top: 25),
+              margin: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.3,right: MediaQuery.of(context).size.width*0.3),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -116,40 +118,51 @@ class profileUI extends StatelessWidget {
               child: Center(
                   child: Text(
                 'Mobile App Developer and Open Source Enthusiastic',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20),textAlign: TextAlign.center,
               )),
             ),
-            SingleChildScrollView(
-              child: Container(
-                // margin: EdgeInsets.only(left: 25, right: 25),
-                child: Column(
-                  children: [
-                    scrollContainer(
-                      leadingIcon: Icons.privacy_tip,
-                      listTitle: 'Privacy',
-                    ),
-                    SizedBox(height: 10,),
-                    scrollContainer(
-                      leadingIcon: Icons.privacy_tip,
-                      listTitle: 'Privacy',
-                    ),
-                    SizedBox(height: 10,),
-                    scrollContainer(
-                      leadingIcon: Icons.privacy_tip,
-                      listTitle: 'Privacy',
-                    ),
-                    SizedBox(height: 10,),
-                    scrollContainer(
-                      leadingIcon: Icons.privacy_tip,
-                      listTitle: 'Privacy',
-                    ),
-                    SizedBox(height: 10,),
-                    scrollContainer(
-                      leadingIcon: Icons.privacy_tip,
-                      listTitle: 'Privacy',
-                    ),
-                    SizedBox(height: 10,),
-                  ],
+            Container(
+              margin: EdgeInsets.only(left: 50, right: 35),
+              // height: 100,
+              height: MediaQuery.of(context).size.height *0.4,
+              width: MediaQuery.of(context).size.width *0.4,
+              child: SingleChildScrollView(
+                child: Container(
+                  // margin: EdgeInsets.only(left: 25, right: 25),
+                  child: Column(
+                    children: [
+                      scrollContainer(
+                        leadingIcon: Icons.privacy_tip,
+                        listTitle: 'Privacy',
+                      ),
+                      // SizedBox(height: 10,),
+                      scrollContainer(
+                        leadingIcon: Icons.history,
+                        listTitle: 'Purchase history',
+                      ),
+                      // SizedBox(height: 10,),
+                      scrollContainer(
+                        leadingIcon: Icons.help,
+                        listTitle: 'Help and support',
+                      ),
+                      // SizedBox(height: 10,),
+                      scrollContainer(
+                        leadingIcon: Icons.settings,
+                        listTitle: 'Settings',
+                      ),
+                      // SizedBox(height: 10,),
+                      scrollContainer(
+                        leadingIcon: Icons.person_add,
+                        listTitle: 'Invite a friend',
+                      ),
+                      // SizedBox(height: 10,),
+                      scrollContainer(
+                        leadingIcon: EvaIcons.logOut,
+                        listTitle: 'Logout',
+                      ),
+                      // SizedBox(height: 10,),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -169,12 +182,12 @@ class scrollContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 50, right: 50),
+      margin: EdgeInsets.only(top: 10),
       decoration: BoxDecoration(color: Colors.grey[200],borderRadius: BorderRadius.circular(100)),
       child: ListTile(
-        leading: Icon(leadingIcon) ,
-        title: Text(listTitle),
-        trailing: Icon(Icons.arrow_forward_ios),
+        leading: Icon(leadingIcon,color: Colors.black,) ,
+        title: Text(listTitle,style: TextStyle(fontSize:16,fontWeight: FontWeight.w300 ),),
+        trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
       ),
     );
   }
