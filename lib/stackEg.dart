@@ -33,8 +33,8 @@ class stackEg extends StatelessWidget {
               child: Container(
                 height: 80,
                 width: 90,
-                color: Colors.yellow,
-              ))
+                color: Colors.yellow,)
+          ),
         ],
       ),
     );

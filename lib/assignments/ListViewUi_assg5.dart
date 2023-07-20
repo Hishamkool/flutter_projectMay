@@ -51,7 +51,8 @@ class listViewAssignment5 extends StatelessWidget {
                       ),
                     )),
                 Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10,bottom: 10),
+                  padding:
+                      const EdgeInsets.only(left: 10, right: 10, bottom: 10),
                   child: Card(
                     // margin: EdgeInsets.all(50),
 
@@ -61,12 +62,14 @@ class listViewAssignment5 extends StatelessWidget {
 
                     child: ListTile(
                       leading: Container(
-
                         height: 100,
                         width: 50,
                         color: containerColors[index],
                       ),
-                      title: Text(titles2[index],style: TextStyle(fontWeight: FontWeight.bold),),
+                      title: Text(
+                        titles2[index],
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       subtitle: Column(
                         children: [
                           Row(
