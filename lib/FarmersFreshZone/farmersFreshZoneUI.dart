@@ -126,12 +126,14 @@ class _farmersFreshZoneState extends State<farmersFreshZone> {
                 options: CarouselOptions(
                   // height: 400,
 
+
                   autoPlay: true,
                   aspectRatio: 2.0,
                   enlargeCenterPage: true,
                 ),
                 items: [
                   Container(
+                    height: 400,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
@@ -210,32 +212,42 @@ class _farmersFreshZoneState extends State<farmersFreshZone> {
           SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
+              mainAxisSpacing: 5,
+              crossAxisSpacing: 1,
+
               // childAspectRatio: 1.1,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Column(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height / 9,
-                      width: MediaQuery.of(context).size.width / 4,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(gridImages[index]),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, blurRadius: 20),
-                        ],
+                    AspectRatio(
+                      
+                      aspectRatio: 4/3,
+                      child: Container(
+                        // height: 100,
+                        // width: 120,
+                        // height: MediaQuery.of(context).size.height * 0.2,
+                        // width: MediaQuery.of(context).size.width * 0.4,
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(gridImages[index]),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(15.0),
+                          boxShadow: [
+                            BoxShadow(color: Colors.black, blurRadius: 20),
+                          ],
+                        ),
+                        // child: Text(gridTitles[index]),
+                        // child: Column(
+                        //
+                        //   children: [
+                        //     Image(image: NetworkImage(gridImages[index])),
+                        //     Text(gridTitles[index]),
+                        //   ],
+                        // ),
                       ),
-                      // child: Text(gridTitles[index]),
-                      // child: Column(
-                      //
-                      //   children: [
-                      //     Image(image: NetworkImage(gridImages[index])),
-                      //     Text(gridTitles[index]),
-                      //   ],
-                      // ),
                     ),
                     SizedBox(
                       height: 10,

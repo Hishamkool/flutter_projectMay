@@ -237,7 +237,7 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return InkWell( //or use gestureDetector for ontap funtionality
       onTap: () {},
       child: Container(
         decoration: BoxDecoration(
