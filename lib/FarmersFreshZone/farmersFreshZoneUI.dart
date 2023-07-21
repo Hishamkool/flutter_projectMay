@@ -52,8 +52,11 @@ class _farmersFreshZoneState extends State<farmersFreshZone> {
             actions: [
               IconButton(onPressed: () {}, icon: Icon(Icons.map)),
               Padding(
-                padding: const EdgeInsets.only(top: 21.0,right: 10),
-                child: Text('Kochi',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),),
+                padding: const EdgeInsets.only(top: 21.0, right: 10),
+                child: Text(
+                  'Kochi',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                ),
               ),
             ],
             bottom: AppBar(
