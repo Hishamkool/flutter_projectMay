@@ -76,6 +76,9 @@ flutter:
      - assets/icon/youtube_icons/
      - assets/profile/
      - assets/images/hotelRooms/
+     - assets/images/FarmersFreshZone/Exotic/
+     - assets/images/FarmersFreshZone/farms/
+     - assets/images/FarmersFreshZone/vegitables/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
