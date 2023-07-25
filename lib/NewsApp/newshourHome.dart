@@ -1,10 +1,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_may_1/NewsApp/newhourPopularNews.dart';
+import 'package:flutter_may_1/NewsApp/newshourCategories.dart';
 
-import '../ExpantionTile.dart';
-import '../drawerMenu.dart';
-import '../gridCustom.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -79,15 +78,28 @@ class _NewshourHomeState extends State<NewshourHome> {
                 // controller: TabController(length: 3, vsync: null ),
                 tabs: [
                   Tab(
-                    text: 'Data Stat',
+                    text: 'Categories',
                   ),
                   Tab(
                     text: 'Upload Item',
                   ),
                   Tab(
-                    text: 'All Data',
+                    text: 'Popular News',
                   ),
                 ],
+                onTap: (index) {
+                  switch (index) {
+                    case 0:
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => NewsHourCategoriesPage(),
+                      ));
+                      break;
+                    case 2:
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => NewsHourPopularNews(),
+                      ));
+                  }
+                },
               ),
             ),
             SliverFillRemaining(
@@ -98,7 +110,9 @@ class _NewshourHomeState extends State<NewshourHome> {
                     height: 500,
                     child: TabBarView(
                       children: [
-                        Center(child: Text('DataSet')), //first tabview
+                        // Center(child: Text('DataSet')),
+                        // first tabview
+                        Center(child: Text('DataSet')),
                         Container(
                           //dropDown
                           child: Column(
