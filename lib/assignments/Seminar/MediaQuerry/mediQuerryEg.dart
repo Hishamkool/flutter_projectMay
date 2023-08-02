@@ -25,18 +25,24 @@ class MediaQuerryEg extends StatelessWidget {
                     border: Border.all(color: Colors.black, width: 2),
                     color: Colors.blue[900]),
                 // height: MediaQuery.of(context).size.height * 0.6,
-                height: mQuerry.height * 0.6,
+                height: mQuerry.height *0.6,
                 width: mQuerry.width * 0.4,
 
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Center(child: Text("Height 60% = ${mQuerry.height * 0.6}",style: const TextStyle(color: Colors.white,fontSize: 16))),
+                    Center(
+                        child: Text("Height 60% = ${mQuerry.height * 0.6}",
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16))),
                     SizedBox(
                       height: 10,
                     ),
-                    Center(child: Text("Width 40% = ${mQuerry.width * 0.4}",style: const TextStyle(color: Colors.white,fontSize: 16))),
+                    Center(
+                        child: Text("Width 40% = ${mQuerry.width * 0.4}",
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16))),
                   ],
                 ),
               ),
@@ -52,11 +58,18 @@ class MediaQuerryEg extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Center(child: Text("Height 40% = ${mQuerry.height * 0.4}",style: const TextStyle(color: Colors.white,fontSize: 16),)),
+                    Center(
+                        child: Text(
+                      "Height 40% = ${mQuerry.height * 0.4}",
+                      style: const TextStyle(color: Colors.white, fontSize: 16),
+                    )),
                     SizedBox(
                       height: 10,
                     ),
-                    Center(child: Text("Width  60% = ${mQuerry.width * 0.6}",style: const TextStyle(color: Colors.white,fontSize: 16))),
+                    Center(
+                        child: Text("Width  60% = ${mQuerry.width * 0.6}",
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16))),
                   ],
                 ),
               ),
@@ -69,20 +82,20 @@ class MediaQuerryEg extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 50),
                 child: Align(
                     alignment: Alignment.topRight,
-                    child: Text("Total height = ${mQuerry.height}",style: const TextStyle(color: Colors.black,fontSize: 16))),
-
+                    child: Text("Total height = ${mQuerry.height}",
+                        style: const TextStyle(
+                            color: Colors.black, fontSize: 16))),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Align(
                     alignment: Alignment.topRight,
-                    child: Text("Total width = ${mQuerry.width}",style: const TextStyle(color: Colors.black,fontSize: 16))),
+                    child: Text("Total width = ${mQuerry.width}",
+                        style: const TextStyle(
+                            color: Colors.black, fontSize: 16))),
               ),
             ],
           ),
-
-          
-          
         ],
       ),
     );
