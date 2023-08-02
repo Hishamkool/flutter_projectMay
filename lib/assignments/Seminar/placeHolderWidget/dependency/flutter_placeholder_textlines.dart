@@ -156,6 +156,7 @@ class AnimatedWrapper extends StatefulWidget {
 
 class _AnimatedWrapperState extends State<AnimatedWrapper> {
   bool _animated = true;
+
   @override
   void initState() {
     super.initState();
