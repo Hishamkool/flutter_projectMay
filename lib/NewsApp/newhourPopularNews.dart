@@ -30,7 +30,8 @@ class NewsHourPopularNews extends StatelessWidget {
     'Science',
     'Technology'
   ];
-var newsLikes =['224','96','74','129','116'];
+  var newsLikes = ['224', '96', '74', '129', '116'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +104,6 @@ var newsLikes =['224','96','74','129','116'];
                         // height: MediaQuery.of(context).size.height,
                         padding: EdgeInsets.only(
                             left: 10, top: 10, right: 10, bottom: 10),
-
                         // color: Colors.blue,
                         child: Stack(
                           children: [
@@ -129,7 +129,6 @@ var newsLikes =['224','96','74','129','116'];
                                   Icon(
                                     Icons.alarm,
                                     size: 18,
-
                                   ),
                                   Text(" 26 July 2023")
                                 ],

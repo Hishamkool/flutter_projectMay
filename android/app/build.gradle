@@ -28,7 +28,8 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 android {
     namespace "flutter.may.project1.flutter_may_1"
     compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+//    ndkVersion flutter.ndkVersion
+    ndkVersion "25.1.8937393"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -44,6 +45,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
